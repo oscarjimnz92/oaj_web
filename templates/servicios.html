@@ -1,0 +1,555 @@
+{% extends 'base.html' %}
+
+{% block title %}Acerca de nosotros | OAJ Inteligencia de Datos{% endblock %}
+
+{% block content %}
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Servicios de Inteligencia de Datos</h1>
+                    <p class="text-xl mb-8">Transformamos datos en ventajas estratégicas para tu negocio</p>
+                    <div class="flex space-x-4">
+                        <a href="{{ url_for('servicios') }}" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition duration-300">Nuestros Servicios</a>
+                        <a href="{{ url_for('contacto') }}" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition duration-300">Contactar</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000025-dcf08dcf0b/images-pexels-com-photos-590016-pexels-photo-590016-auto-compress-cs-tinysrgb-dpr-2-h-650-w-940.jpeg?ph=9d05aa9fec" alt="Data analysis" class="rounded-lg shadow-xl floating w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Approach -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestro Enfoque Único</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Más que consultores, somos socios en tu transformación digital</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Auditoría inicial gratuita</h3>
+                    <p class="text-gray-600">Identificamos tus necesidades específicas sin compromiso</p>
+                </div>
+                
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Roadmap claro</h3>
+                    <p class="text-gray-600">Objetivos definidos a 3, 6 y 12 meses</p>
+                </div>
+                
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Implementación acompañada</h3>
+                    <p class="text-gray-600">No solo recomendaciones, sino ejecución conjunta</p>
+                </div>
+                
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Soporte post-implementación</h3>
+                    <p class="text-gray-600">Garantizamos adopción y resultados sostenibles</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-indigo-100 p-6 rounded-lg">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-3/4 mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">¿Sabías que?</h3>
+                        <p class="text-gray-700">Las empresas data-driven tienen <span class="font-bold">23x más probabilidad</span> de adquirir clientes</p>
+                    </div>
+                    <div class="md:w-1/4 text-right">
+                        <button class="bg-indigo-600 text-white px-6 py-2 rounded-md font-medium hover:bg-indigo-700 transition duration-300">Más datos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluciones especializadas para convertir datos en crecimiento</p>
+            </div>
+            
+            <!-- Consultoría de Análisis de Datos -->
+            <div id="consultoria-datos" class="service-card bg-white rounded-xl shadow-md overflow-hidden mb-16 transition duration-500">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Consultoría de Análisis de Datos</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">Convierte información en ventajas estratégicas</p>
+                        <p class="text-gray-700 mb-6">Nuestros expertos te guían para extraer el máximo valor de tus datos mediante:</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Diagnóstico de madurez analítica de tu organización</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Planes personalizados de implementación de analytics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Capacitación para equipos en herramientas y metodologías</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Desarrollo de KPIs y dashboards ejecutivos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Optimización continua basada en insights</span>
+                            </li>
+                        </ul>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Beneficios clave:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Toma decisiones con cero adivinanzas</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Identifica oportunidades de crecimiento ocultas</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Alinea todos los departamentos con métricas unificadas</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Transforma tu cultura corporativa hacia el data-driven thinking</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="mt-6 italic text-gray-600 border-l-4 border-indigo-500 pl-4">
+                            "Lo que no se mide, no se puede mejorar" - y nosotros te ayudamos a medir lo que realmente importa.
+                        </blockquote>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000048-9924c9924f/image_fx_%20%2836%29.png?ph=9d05aa9fec" alt="Consultoría de Análisis de Datos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Estudios de Mercado -->
+            <div id="investigacion-mercado" class="service-card bg-white rounded-xl shadow-md overflow-hidden mb-16 transition duration-500">
+                <div class="flex flex-col md:flex-row-reverse">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-search-dollar text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Estudios de Mercado</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">Conoce a tu audiencia mejor que ellos mismos.</p>
+                        <p class="text-gray-700 mb-6">Desciframos mercados para que puedas dominarlos:</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Psicografía del consumidor: Por qué realmente te eligen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Inteligencia competitiva: Fortalezas, debilidades y puntos ciegos de la competencia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Pronóstico de tendencias: Oportunidades antes que sean tendencia</span>
+                            </li>
+                        </ul>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Beneficios clave:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Segmentación hiperpersonalizada: Descubre nichos no explotados</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Anticipa tendencias: 6-12 meses antes que la competencia</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Precios óptimos: Modelos que maximizan ganancias sin perder clientes</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Validación de productos: Testea ideas antes de invertir</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 font-semibold text-gray-700">
+                            Estrategias con datos = liderazgo de mercado
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000050-ae766ae76f/image_fx_%20%2837%29.png?ph=9d05aa9fec" alt="Estudios de Mercado" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bots con IA -->
+            <div id="bot_ia" class="service-card bg-white rounded-xl shadow-md overflow-hidden mb-16 transition duration-500">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-robot text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Bots con IA</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">Automatiza el crecimiento, no solo tareas.</p>
+                        <p class="text-gray-700 mb-6">Nuestros bots inteligentes funcionan como empleados 24/7 - más listos, rápidos y escalables:</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Servicio al cliente: Chatbots que resuelven 80% de consultas al instante.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Operaciones: Automatización de facturas, actualizaciones CRM o alertas de inventario.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Análisis de datos: Bots que generan insights en tiempo real.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Tareas específicas: Automatizaciones adecuadas a las necesidades del negocio.</span>
+                            </li>
+                        </ul>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Beneficios clave:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Ahorro del 50-70% en operaciones repetitivas</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Servicio 24/7: Responde incluso fuera de horario laboral</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Escalabilidad instantánea: Atiende picos de demanda sin contratar staff</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Autoaprendizaje: Mejora continua sin reprogramación</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 font-semibold text-gray-700">
+                            Trabaja menos, logra más
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000052-d7343d7344/image_fx_%20%28132%29.jpeg?ph=9d05aa9fec" alt="Bots con IA" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Minería y Limpieza de Datos -->
+            <div id="min-limpieza" class="service-card bg-white rounded-xl shadow-md overflow-hidden mb-16 transition duration-500">
+                <div class="flex flex-col md:flex-row-reverse">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-database text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Minería y Limpieza de Datos</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">Transformamos datos crudos en información valiosa</p>
+                        <p class="text-gray-700 mb-6">Extraemos patrones ocultos y depuramos errores para que tus datos sean precisos, consistentes y listos para análisis. Ideal para:</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Eliminar registros duplicados o irrelevantes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Estandarizar formatos para integración perfecta</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Preparar datos para IA/ML o cumplimiento normativo</span>
+                            </li>
+                        </ul>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Beneficios clave:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Ahorra hasta un 60% de tiempo al eliminar datos redundantes o corruptos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Precisión certificada: Datos 100% confiables para análisis críticos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Estandarización inteligente: Compatibilidad con cualquier plataforma</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Cumplimiento normativo: Preparación para auditorías GDPR/LGPD</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 font-semibold text-gray-700">
+                            Deja de adivinar - decide con datos impecables
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000042-86f6286f64/image_fx_%20%2832%29.png?ph=9d05aa9fec" alt="Minería y Limpieza de Datos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Análisis Estadístico -->
+            <div id="anal-estadistico" class="service-card bg-white rounded-xl shadow-md overflow-hidden mb-16 transition duration-500">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-bar text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Análisis Estadístico</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">Convierte números en ventajas estratégicas</p>
+                        <p class="text-gray-700 mb-6">Modelado estadístico avanzado para optimizar operaciones, reducir riesgos y capitalizar oportunidades:</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Pruebas A/B para campañas de marketing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Pronósticos de demanda y optimización de inventario</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Medición de ROI en todos tus proyectos</span>
+                            </li>
+                        </ul>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Beneficios clave:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Modelos predictivos con hasta 90% de exactitud</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Reducción de riesgos: Identifica amenazas antes que ocurran</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Optimización de recursos: Asignación inteligente de presupuestos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Ventaja competitiva: Patrones que la competencia no ve</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 font-semibold text-gray-700">
+                            Deja que las matemáticas sean tu ventaja competitiva
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000054-83a4483a46/path-digital-tR0jvlsmCuQ-unsplash.jpeg?ph=9d05aa9fec" alt="Análisis Estadístico" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Diseño de Infografías -->
+            <div id="infografias" class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500">
+                <div class="flex flex-col md:flex-row-reverse">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-pie text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Diseño de Infografías</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">Comunica datos de forma irresistible</p>
+                        <p class="text-gray-700 mb-6">Convertimos reportes complejos en historias visuales impactantes para:</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Simplificar presentaciones ejecutivas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Aumentar engagement en redes y plataformas digitales</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                <span>Destacar KPIs para inversionistas o stakeholders</span>
+                            </li>
+                        </ul>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Beneficios clave:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Engagement comprobado: +300% más retención vs. textos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Toma decisiones más rápida: Información digerible en segundos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Branding con datos: Refuerza tu imagen como empresa innovadora</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Compartibilidad viral: Contenido listo para redes y presentaciones</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 font-semibold text-gray-700">
+                            Donde la claridad se encuentra con la creatividad
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000046-b3d69b3d6a/image_fx_%20%2835%29.png?ph=9d05aa9fec" alt="Diseño de Infografías" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-indigo-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
+                <p class="text-xl max-w-2xl mx-auto">Listos para transformar tus datos en crecimiento estratégico</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-indigo-600 border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-indigo-300" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-indigo-600 border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-indigo-300" placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium mb-1">Servicio de interés</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg bg-indigo-600 border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+                                <option>Selecciona un servicio</option>
+                                <option>Consultoría de Análisis de Datos</option>
+                                <option>Estudios de Mercado</option>
+                                <option>Bots con IA</option>
+                                <option>Minería y Limpieza de Datos</option>
+                                <option>Análisis Estadístico</option>
+                                <option>Diseño de Infografías</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-indigo-600 border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-indigo-300" placeholder="Cuéntanos sobre tu proyecto"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-indigo-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Enviar Mensaje</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-indigo-800 p-8 rounded-xl h-full">
+                        <h3 class="text-xl font-bold mb-6">Más formas de contactarnos</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-indigo-200">contacto@oajdatos.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Teléfono</h4>
+                                    <p class="text-indigo-200">+52 55 1234 5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Oficina</h4>
+                                    <p class="text-indigo-200">Av. Insurgentes Sur 1234, Col. Roma Norte, CDMX</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Horario</h4>
+                                    <p class="text-indigo-200">Lunes a Viernes: 9:00 - 18:00 hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Síguenos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-indigo-700 p-3 rounded-full hover:bg-indigo-600 transition duration-300">
+                                    <i class="fab fa-linkedin-in text-white"></i>
+                                </a>
+                                <a href="#" class="bg-indigo-700 p-3 rounded-full hover:bg-indigo-600 transition duration-300">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </a>
+                                <a href="#" class="bg-indigo-700 p-3 rounded-full hover:bg-indigo-600 transition duration-300">
+                                    <i class="fab fa-facebook-f text-white"></i>
+                                </a>
+                                <a href="#" class="bg-indigo-700 p-3 rounded-full hover:bg-indigo-600 transition duration-300">
+                                    <i class="fab fa-instagram text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

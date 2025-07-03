@@ -1,0 +1,251 @@
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-900 text-white px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Necesita Contactarnos?</h2>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">Estamos listos para ayudarte a transformar tus datos en crecimiento empresarial.</p>
+                <div class="w-24 h-1 bg-blue-400 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form method="POST" action="{{ url_for('mensaje') }}" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="text" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+
+                        <div>
+                                <label for="service" class="block text-sm font-medium mb-1">Servicio de interés</label>
+                                <select id="service" class="w-full px-4 py-3 rounded-lg bg-indigo-600 border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+                                    <option>Selecciona un servicio</option>
+                                    <option>Consultoría de Análisis de Datos</option>
+                                    <option>Estudios de Mercado</option>
+                                    <option>Bots con IA</option>
+                                    <option>Minería y Limpieza de Datos</option>
+                                    <option>Análisis Estadístico</option>
+                                    <option>Diseño de Infografías</option>
+                                </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg shadow-lg w-full transition-all">
+                            Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-xl h-full">
+                        <h3 class="text-xl font-bold mb-6">Información de Contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-500/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Dirección</h4>
+                                    <p class="text-gray-400">Col. Roma Norte, Ciudad de México</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-500/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Teléfono</h4>
+                                    <p class="text-gray-400">+52 55 1234 5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-500/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-400">oajdataintelligence@gmail.com</p>
+                                </div>
+                            </div>
+                             
+                            <div class="flex items-start">
+                                <div class="bg-yellow-500/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-yellow-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Horario</h4>
+                                    <p class="text-gray-400">Lunes a Viernes: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Síguenos en redes</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-sky-500 hover:bg-sky-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">OAJ Inteligencia de datos</h3>
+                    <p class="text-gray-400">Transformamos datos en ventajas estratégicas para tu negocio.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="{{ url_for('servicios') }}" class="text-gray-400 hover:text-white transition duration-300">Consultoría de Análisis</a></li>
+                        <li><a href="{{ url_for('servicios') }}" class="text-gray-400 hover:text-white transition duration-300">Estudios de Mercado</a></li>
+                        <li><a href="{{ url_for('servicios') }}" class="text-gray-400 hover:text-white transition duration-300">Bots con IA</a></li>
+                        <li><a href="{{ url_for('servicios') }}" class="text-gray-400 hover:text-white transition duration-300">Minería de Datos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
+                    <ul class="space-y-2">
+                        <li><a href="{{ url_for('index') }}" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="{{ url_for('acerca') }}" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
+                        <li><a href="{{ url_for('servicios') }}" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
+                        <li><a href="{{ url_for('contacto') }}" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Suscríbete para recibir insights de datos.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full focus:outline-none">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2024 OAJ Inteligencia de datos. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="{{ url_for('privacidad') }}" class="text-gray-400 hover:text-white transition duration-300">Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Términos</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 shadow-lg z-50 hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0 md:mr-8">
+                    <p class="text-sm">Utilizamos cookies para garantizar el correcto funcionamiento y seguridad de nuestro sitio web, y para ofrecerte la mejor experiencia de usuario posible.</p>
+                </div>
+                <div class="flex space-x-3">
+                    <button id="accept-necessary" class="bg-gray-700 text-white px-4 py-2 rounded text-sm hover:bg-gray-600 transition">
+                        Aceptar solo necesarias
+                    </button>
+                    <button id="accept-all" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-500 transition">
+                        Aceptar todas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation for service cards on scroll
+        // Cookie consent
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-consent').classList.remove('hidden');
+            }
+            
+            document.getElementById('accept-necessary').addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'necessary');
+                document.getElementById('cookie-consent').classList.add('hidden');
+            });
+            
+            document.getElementById('accept-all').addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'all');
+                document.getElementById('cookie-consent').classList.add('hidden');
+            });
+            
+            const toggleButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            toggleButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+            });
+
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            serviceCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+
+
+                // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+
+    </script>
