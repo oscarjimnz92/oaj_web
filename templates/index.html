@@ -14,9 +14,9 @@
                         <h3 class="text-xl font-semibold text-blue-800 mb-2">¡Tu éxito empieza aquí!</h3>
                         <p class="text-blue-700">Soluciones personalizadas para cada necesidad empresarial</p>
                     </div>
-                    <button class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover-scale transition-all">
+                    <a href="{{ url_for('servicios') }}#services" class="button gradient-bg hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover-scale transition-all">
                         Conoce nuestros servicios <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
+                    </a>
                 </div>
                 <div class="lg:w-1/2 mt-8 lg:mt-0">
                     <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000040-5676156764/whisk_storyboarda615f2785edc4bec8fe227ddebd112c.png?ph=9d05aa9fec" 
@@ -38,7 +38,7 @@
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/2">
                     <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <p class="text-lg text-gray-700 mb-6">En <span class="font-bold text-blue-600">OAJ Inteligencia de Datos</span>, convertimos números en oportunidades. Somos expertos en análisis de marketing, inteligencia artificial y visualización de datos, ayudando a empresas a tomar decisiones estratégicas con información 100% accionable. Tu éxito comercial empieza con datos que hablan claro.</p>
+                        <p  class="text-gray-700 mb-6">En <span class="font-bold text-blue-600">OAJ Inteligencia de Datos</span>, convertimos números en oportunidades. Somos expertos en análisis de marketing, inteligencia artificial y visualización de datos, ayudando a empresas a tomar decisiones estratégicas con información 100% accionable. Tu éxito comercial empieza con datos que hablan claro.</p>
                         
                         <div class="flex items-start mb-6">
                             <div class="bg-blue-100 p-3 rounded-full mr-4">
@@ -51,7 +51,7 @@
                         </div>
                         
                         <div class="gradient-bg hover:opacity-100 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover-scale transition-all">
-                            <p class="font-medium italic"> "Tu éxito no es una meta… ¡es el camino que recorremos juntos!" </p>
+                            <a href="{{ url_for('acerca') }}#oaj_us" class="font-medium italic"> "Tu éxito no es una meta… ¡es el camino que recorremos juntos!" </a>
                         </div>
                     </div>
                 </div>
