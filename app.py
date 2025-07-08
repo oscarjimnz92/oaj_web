@@ -35,7 +35,7 @@ def mensaje():
     msg.body = f"Nombre: {nombre}\nEmail: {email}\nServicio: {service}\n\nMensaje:\n{mensajes}"
     mail.send(msg)
 
-    flash('¡Mensaje enviado correctamente!')
+    flash('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.')
     return redirect(request.referrer or url_for('index'))
 
 @app.route('/acerca')

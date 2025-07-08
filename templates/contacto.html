@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Acerca de nosotros | OAJ Inteligencia de Datos{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacta con nuestro equipo</h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-700">Estamos listos para ayudarte con tus necesidades de análisis de datos e inteligencia artificial</p>
+                    <div class="flex space-x-4">
+                        <a href="{{ url_for('servicios') }}#services" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition duration-300">Nuestros Servicios</a>
+                        <a href="{{ url_for('contacto') }}" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition duration-300">Contactar</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://9d05aa9fec.cbaul-cdnwnd.com/e9938078f728567f73a2d0eca064dc05/200000025-dcf08dcf0b/images-pexels-com-photos-590016-pexels-photo-590016-auto-compress-cs-tinysrgb-dpr-2-h-650-w-940.jpeg?ph=9d05aa9fec" alt="Data analysis" class="rounded-lg shadow-xl floating w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Contact Info -->
+            <div>
+                <div class="bg-white rounded-xl shadow-lg p-8 contact-card transition duration-300">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">¿Necesitas contactarnos?</h2>
+                    <p class="text-lg mb-6">Bienvenido a OAJ Inteligencia de datos, tu mejor opción para todo lo relacionado con la consultoría de analítica de marketing.</p>
+                    <p class="text-lg mb-6">Nuestro equipo se especializa en:</p>
+                    <ul class="pl-5 mt-2 space-y-4 text-gray-600">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-chart-line text-2xl text-indigo-500"></i>
+                            <span>Análisis de datos</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-database text-2xl text-indigo-500"></i>
+                            <span>Minería y limpieza de datos</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-chart-bar text-2xl text-indigo-500"></i>
+                            <span>Análisis estadístico</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-robot text-2xl text-indigo-500"></i>
+                            <span>Creación de bots con inteligencia artificial</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+{% endblock %}
